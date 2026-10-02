@@ -1,123 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<title>Our Little Forever 💕</title>
+    <title>Our Little Love World 💕</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Your CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
+
 <body>
 
-<!-- FLOATING DECORATIONS -->
 
-<div class="floating f1">💗</div>
-<div class="floating f2">🌸</div>
-<div class="floating f3">🧸</div>
-<div class="floating f4">💕</div>
-<div class="floating f5">✨</div>
-<div class="floating f6">🌷</div>
+<!-- =====================================================
+     LOGIN SCREEN
+===================================================== -->
 
-<div id="hearts"></div>
-
-
-<!-- =========================
-     LOGIN
-========================= -->
-
-<section id="loginScreen" class="screen login-screen">
+<section
+    id="loginScreen"
+    class="screen login-screen"
+>
 
     <div class="login-card">
 
-        <div class="bear">🧸</div>
+        <div class="login-heart">
+            💕
+        </div>
 
-        <h1>Our Little Love Story</h1>
+        <h1>
+            Our Little Love World
+        </h1>
 
-        <p class="login-subtitle">
-            A private place for our memories 💕
+        <p>
+            A tiny place made with lots of love 💌
         </p>
+
 
         <input
             id="email"
             type="email"
-            placeholder="Email address"
+            placeholder="Your email 💌"
+            autocomplete="email"
         >
+
 
         <input
             id="password"
             type="password"
-            placeholder="Password"
+            placeholder="Your password 🔐"
+            autocomplete="current-password"
         >
 
-        <button class="primary-btn" onclick="login()">
+
+        <button
+            class="primary-btn"
+            onclick="login()"
+        >
             Open Our World 💌
         </button>
 
-        <button class="text-btn" onclick="signup()">
-            Create our private account
+
+        <button
+            class="secondary-btn"
+            onclick="signup()"
+        >
+            Create Love Account 💕
         </button>
 
-        <p id="authMessage"></p>
+
+        <p
+            id="authMessage"
+            class="auth-message"
+        ></p>
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     HOME
-========================= -->
 
-<section id="homeScreen"
-         class="screen hidden">
+<!-- =====================================================
+     HOME SCREEN
+===================================================== -->
 
-    <header class="topbar">
+<section
+    id="homeScreen"
+    class="screen hidden"
+>
 
-        <div class="logo">
-            Our Forever 💕
+    <div class="home-container">
+
+        <div class="top-bar">
+
+            <button
+                class="small-btn"
+                onclick="logout()"
+            >
+                Logout
+            </button>
+
         </div>
 
-        <button class="logout-btn"
-                onclick="logout()">
-            Logout
-        </button>
-
-    </header>
-
-
-    <main class="home">
 
         <div class="hero">
 
-            <span class="small-label">
-                A little corner of the internet
-            </span>
+            <div class="hero-hearts">
+                ❤️ 💕 💖
+            </div>
 
             <h1>
-                Made With<br>
-                <span>Love</span> 💗
+                Happy Boyfriend's Day
             </h1>
 
+            <h2>
+                My Dear Aditya 💗
+            </h2>
+
             <p>
-                Every letter, every photograph,
-                every little memory...
+                Welcome to our little world of
+                love, letters and memories.
             </p>
 
         </div>
@@ -125,209 +144,256 @@
 
         <!-- ENVELOPE -->
 
-        <div class="envelope-container">
+        <div
+            id="envelope"
+            class="envelope"
+            onclick="openEnvelope()"
+        >
 
-            <div id="envelope"
-                 class="envelope"
-                 onclick="openEnvelope()">
+            <div class="envelope-back">
 
-                <div class="envelope-back"></div>
+                <div class="envelope-paper">
 
-                <div class="letter-paper">
+                    <div class="letter-preview">
 
-                    <div class="mini-heart">
-                        💕
+                        💌
+
+                        <span>
+                            For Aditya
+                        </span>
+
                     </div>
 
-                    <p>
-                        For my favorite person
-                    </p>
-
-                </div>
-
-                <div class="envelope-flap"></div>
-
-                <div class="envelope-front"></div>
-
-                <div class="seal">
-                    ♥
                 </div>
 
             </div>
 
-            <p class="tap-text">
-                Tap the envelope 💌
+
+            <div class="envelope-flap">
+            </div>
+
+
+            <div class="envelope-front">
+
+                <div class="envelope-heart">
+                    ❤️
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="tap-text">
+            Tap the letter to open our story 💕
+        </p>
+
+
+        <div class="home-buttons">
+
+            <button
+                class="feature-btn"
+                onclick="openLetters()"
+            >
+                💌 Love Letters
+            </button>
+
+
+            <button
+                class="feature-btn"
+                onclick="openMemories()"
+            >
+                📸 Our Memories
+            </button>
+
+        </div>
+
+
+        <div class="cute-message">
+
+            <span>🧸</span>
+
+            <p>
+                Every picture, every letter,
+                every little moment...
+                is a piece of our story. ❤️
             </p>
 
         </div>
 
-
-        <!-- COUPLE -->
-
-        <div class="couple">
-
-            <div class="character girl">
-                👩🏻
-                <span>Her</span>
-            </div>
-
-            <div class="love-line">
-                💕
-            </div>
-
-            <div class="character boy">
-                👦🏻
-                <span>Him</span>
-            </div>
-
-        </div>
-
-    </main>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     LETTERS
-========================= -->
 
-<section id="lettersScreen"
-         class="screen hidden inner-screen">
+<!-- =====================================================
+     LETTERS SCREEN
+===================================================== -->
 
-    <button class="back-btn"
-            onclick="goHome()">
-        ← Home
-    </button>
+<section
+    id="lettersScreen"
+    class="screen hidden"
+>
 
-    <div class="section-heading">
+    <div class="page-container">
 
-        <span>💌</span>
+        <button
+            class="back-btn"
+            onclick="goHome()"
+        >
+            ← Back
+        </button>
 
-        <h2>
-            Letters From My Heart
-        </h2>
 
-        <p>
-            Open whichever one your heart chooses.
+        <h1 class="page-title">
+            Our Love Letters 💌
+        </h1>
+
+        <p class="page-subtitle">
+            Little pieces of my heart for you ❤️
         </p>
+
+
+        <div class="letters-grid">
+
+
+            <article
+                class="letter-card"
+                onclick="openLetter(0)"
+            >
+
+                <div class="card-icon">
+                    💌
+                </div>
+
+                <h3>
+                    My Little Love Letter
+                </h3>
+
+                <p>
+                    A letter straight from my heart ❤️
+                </p>
+
+            </article>
+
+
+            <article
+                class="letter-card"
+                onclick="openLetter(1)"
+            >
+
+                <div class="card-icon">
+                    🌹
+                </div>
+
+                <h3>
+                    Why I Love You
+                </h3>
+
+                <p>
+                    A few of the million reasons...
+                </p>
+
+            </article>
+
+
+            <article
+                class="letter-card"
+                onclick="openLetter(2)"
+            >
+
+                <div class="card-icon">
+                    🌙
+                </div>
+
+                <h3>
+                    Before You Sleep
+                </h3>
+
+                <p>
+                    A little good-night message 💕
+                </p>
+
+            </article>
+
+
+            <article
+                class="letter-card"
+                onclick="openLetter(3)"
+            >
+
+                <div class="card-icon">
+                    💖
+                </div>
+
+                <h3>
+                    Forever Us
+                </h3>
+
+                <p>
+                    Our story continues...
+                </p>
+
+            </article>
+
+
+        </div>
 
     </div>
 
-
-    <div class="letter-grid">
-
-        <article class="letter-card"
-                 onclick="openLetter(0)">
-
-            <div class="letter-emoji">
-                💌
-            </div>
-
-            <h3>
-                My Little Love Letter
-            </h3>
-
-            <p>
-                Something I want you to know...
-            </p>
-
-        </article>
+</section>
 
 
-        <article class="letter-card"
-                 onclick="openLetter(1)">
 
-            <div class="letter-emoji">
+<!-- =====================================================
+     LETTER READER
+===================================================== -->
+
+<section
+    id="readerScreen"
+    class="screen hidden"
+>
+
+    <div class="reader-container">
+
+        <button
+            class="back-btn"
+            onclick="openLetters()"
+        >
+            ← Back to Letters
+        </button>
+
+
+        <div class="letter-paper">
+
+            <div class="paper-decoration">
                 🌹
             </div>
 
-            <h3>
-                Why I Love You
-            </h3>
 
-            <p>
-                A few reasons among millions...
-            </p>
-
-        </article>
+            <h1 id="letterTitle">
+                My Little Love Letter 💌
+            </h1>
 
 
-        <article class="letter-card"
-                 onclick="openLetter(2)">
-
-            <div class="letter-emoji">
-                🌙
+            <div
+                id="letterContent"
+                class="letter-content"
+            >
             </div>
 
-            <h3>
-                Before You Sleep
-            </h3>
 
-            <p>
-                A tiny good-night message...
-            </p>
+            <div class="letter-signature">
 
-        </article>
+                With all my heart,
 
+                <br>
 
-        <article class="letter-card"
-                 onclick="openLetter(3)">
+                ❤️
 
-            <div class="letter-emoji">
-                💖
             </div>
 
-            <h3>
-                Forever Us
-            </h3>
-
-            <p>
-                The story I want to keep writing...
-            </p>
-
-        </article>
-
-    </div>
-
-
-    <button class="memory-button"
-            onclick="openMemories()">
-
-        📸 Our Memory Garden
-
-    </button>
-
-</section>
-
-
-<!-- =========================
-     LETTER READER
-========================= -->
-
-<section id="readerScreen"
-         class="screen hidden inner-screen">
-
-    <button class="back-btn"
-            onclick="openLetters()">
-
-        ← Letters
-
-    </button>
-
-    <div class="love-paper">
-
-        <div class="paper-decoration">
-            🌸
-        </div>
-
-        <h2 id="letterTitle"></h2>
-
-        <div class="paper-line"></div>
-
-        <p id="letterContent"></p>
-
-        <div class="signature">
-            Forever yours 💕
         </div>
 
     </div>
@@ -335,128 +401,169 @@
 </section>
 
 
-<!-- =========================
-     MEMORIES
-========================= -->
 
-<section id="memoryScreen"
-         class="screen hidden inner-screen">
+<!-- =====================================================
+     MEMORY SCREEN
+===================================================== -->
 
-    <button class="back-btn"
-            onclick="openLetters()">
+<section
+    id="memoryScreen"
+    class="screen hidden"
+>
 
-        ← Letters
+    <div class="page-container">
 
-    </button>
+        <button
+            class="back-btn"
+            onclick="goHome()"
+        >
+            ← Back
+        </button>
 
 
-    <div class="section-heading">
+        <h1 class="page-title">
+            Our Memory Garden 📸
+        </h1>
 
-        <span>📸</span>
 
-        <h2>
-            Our Memory Garden
-        </h2>
-
-        <p>
-            Our favorite moments, safely together in the cloud ☁️💕
+        <p class="page-subtitle">
+            Our beautiful moments, safely kept in the clouds ☁️💕
         </p>
 
-    </div>
+
+        <!-- UPLOAD -->
+
+        <div class="upload-box">
+
+            <div class="upload-icon">
+                📸
+            </div>
 
 
-    <!-- UPLOAD -->
+            <h3>
+                Add a beautiful memory
+            </h3>
 
-    <div class="upload-area">
 
-        <label class="upload-card">
+            <p>
+                Photos and videos will be saved permanently
+                to your private cloud memory.
+            </p>
 
-            <span>📸</span>
 
-            <strong>
-                Add Photos
-            </strong>
+            <label
+                class="upload-btn"
+                for="memoryInput"
+            >
+                ❤️ Choose Photos / Videos
+            </label>
 
-            <small>
-                Choose your favorite moments
-            </small>
 
             <input
+                id="memoryInput"
                 type="file"
-                id="photoInput"
-                accept="image/*"
+                accept="image/*,video/*"
                 multiple
+                hidden
                 onchange="uploadFiles(this.files)"
             >
 
-        </label>
+
+            <p
+                id="uploadStatus"
+                class="upload-status"
+            ></p>
+
+        </div>
 
 
-        <label class="upload-card">
+        <!-- MEMORY GRID -->
 
-            <span>🎥</span>
+        <div
+            id="memoryGrid"
+            class="memory-grid"
+        >
 
-            <strong>
-                Add Videos
-            </strong>
+            <div class="empty-memory">
 
-            <small>
-                Keep our little movies forever
-            </small>
+                🧸💕
 
-            <input
-                type="file"
-                id="videoInput"
-                accept="video/*"
-                multiple
-                onchange="uploadFiles(this.files)"
-            >
+                <h3>
+                    Our memory garden is waiting...
+                </h3>
 
-        </label>
+                <p>
+                    Add your first beautiful moment.
+                </p>
 
-    </div>
+            </div>
 
-
-    <div id="uploadStatus"
-         class="upload-status">
-    </div>
-
-
-    <!-- MEMORY GRID -->
-
-    <div id="memoryGrid"
-         class="memory-grid">
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- =========================
+
+<!-- =====================================================
      IMAGE VIEWER
-========================= -->
+===================================================== -->
 
-<div id="viewer"
-     class="viewer hidden"
-     onclick="closeViewer()">
+<div
+    id="viewer"
+    class="viewer hidden"
+>
 
-    <button class="viewer-close">
+    <button
+        class="viewer-close"
+        onclick="closeViewer()"
+    >
         ×
     </button>
 
-    <img id="viewerImage">
+
+    <img
+        id="viewerImage"
+        src=""
+        alt="Memory"
+    >
 
 </div>
 
 
-<!-- TOAST -->
 
-<div id="toast"
-     class="toast">
-</div>
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    id="toast"
+    class="toast"
+></div>
 
 
-<script src="app.js"></script>
+
+<!-- =====================================================
+     SUPABASE
+     IMPORTANT:
+     This MUST come BEFORE app.js
+===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
+
+
+<!-- =====================================================
+     YOUR JAVASCRIPT
+===================================================== -->
+
+<script
+    src="app.js"
+></script>
+
 
 </body>
+
       </html>

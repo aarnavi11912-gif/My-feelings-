@@ -7,8 +7,6 @@ const SUPABASE_URL =
 
 const SUPABASE_KEY =
     "sb_publishable_UD6-tboqgctR4KEiaEZzcw_8cLyWvNH";
-
-
 const { createClient } =
     supabase.createClient(
         SUPABASE_URL,
